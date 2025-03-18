@@ -1,58 +1,150 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <title>2ББпС 59 ОШбр</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Базові стилі можна додати прямо тут або підключити окремий .css -->
   <style>
-    /* Пока можно добавить простой стиль прямо сюда, 
-       или чуть позже подключим отдельный файл CSS. */
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    header, footer {
-      background-color: #333;
-      color: white;
-      padding: 15px;
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    /* Hero (шапка з фоновим зображенням) */
+    .hero {
+      background: url('ВАШЕ_ФОНОВЕ_ЗОБРАЖЕННЯ.jpg') no-repeat center center;
+      background-size: cover;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      color: #fff;
+      position: relative;
     }
-    main {
-      padding: 20px;
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* затемнення фону */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
       max-width: 800px;
       margin: 0 auto;
+      padding: 20px;
     }
-    h1, h2 {
-      margin-top: 0;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
-    .form-container {
-      margin-top: 30px;
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .hero a {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #f44336;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .hero a:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Основний розділ */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .section p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Форма або iframe */
+    .form-section {
+      text-align: center;
     }
     iframe {
       width: 100%;
-      height: 800px; /* Можно подстроить под размер формы */
+      height: 800px; /* налаштуйте під розмір вашої Google Форми */
       border: none;
+    }
+
+    /* Футер */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>2ББпС 59 ОШбр</h1>
-  </header>
 
-  <main>
-    <h2>Слава Україні!</h2>
-    <p>Тут ви можете взнати про підрозділ і залишити заявку на вступ.</p>
-
-    <div class="form-container">
-      <h3>Подать заявку</h3>
-      <!-- Здесь встроим Google Форму -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXntXAZ6m15GI-mT4NSu_PKd9Fkv2wzMqrgwtVYID4pkJBBg/viewform?usp=header"></iframe>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>2ББпС 59 ОШбр</h1>
+      <p>Приєднуйся до нашого підрозділу та захищай Україну разом з нами!</p>
+      <a href="#form">Подати заявку</a>
     </div>
-  </main>
+  </section>
 
+  <!-- Основний блок з інформацією -->
+  <div class="container">
+    <div class="section">
+      <h2>Про нас</h2>
+      <p>
+        Коротко опишіть, чим займається ваш батальйон, які основні завдання,
+        чому варто приєднатися саме до вас, які переваги та можливості отримають рекрути.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Наші цілі</h2>
+      <p>
+        Розкажіть про те, як ви використовуєте безпілотні системи, які інновації впроваджуєте,
+        які результати вже досягли та що плануєте на майбутнє.
+      </p>
+    </div>
+
+    <!-- Вбудована Google Форма -->
+    <div class="section form-section" id="form">
+      <h2>Подати заявку</h2>
+      <iframe src="ВАШ_ЛІНК_НА_GOOGLE_ФОРМУ"></iframe>
+    </div>
+  </div>
+
+  <!-- Футер -->
   <footer>
-    <p>© 2025 2БпС 59 ОШбр</p>
+    <p>© 2025 2ББпС 59 ОШбр. Всі права захищені.</p>
   </footer>
+
 </body>
 </html>
