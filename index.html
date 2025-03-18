@@ -12,15 +12,30 @@
       box-sizing: border-box;
     }
 
+    @font-face {
+  font-family: 'UAFSans';
+  src: url('fonts/UAFSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+    @font-face {
+  font-family: 'UAFSans';
+  src: url('fonts/UAFSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+    
+    
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'UAFSans', sans-serif;
       color: #333;
       background-color: #f4f4f4; /* Світло-сірий фон для контенту */
     }
 
     /* Hero (верхній блок із фоновим зображенням) */
     .hero {
-      background: url('FB_обкладинка_2ББпС.jpg') no-repeat center center;
+      background: url('images/FB_обкладинка_2ББпС.jpg') no-repeat center center;
       background-size: cover;
       min-height: 70vh; /* Зріст блоку по висоті вікна */
       display: flex;
@@ -33,22 +48,23 @@
     }
 
     /* Напівпрозорий шар, щоб текст читався краще */
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
+    
     .hero-content {
       position: relative;
       z-index: 1; /* Щоб текст був поверх hero-overlay */
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      margin-top: 300px;
     }
 
-    .hero h1 {
-      font-size: 3rem;
+    .hero h1:first-of-type {
+      font-size: 2.5rem; 
+      margin-bottom: 10px;
+    }   
+
+    .hero h1:last-of-type {
+      font-size: 2.0rem; 
       margin-bottom: 20px;
     }
 
@@ -131,7 +147,11 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>2ББпС 59 ОШбр</h1>
+      <h1>
+        2 БАТАЛЬЙОН БЕЗПІЛОТНИХ СИСТЕМ<br>
+        59 ОКРЕМОЇ ШТУРМОВОЇ БРИГАДИ<br>
+        ІМ. ЯКОВА ГАНДЗЮКА
+      </h1>
       <p>Приєднуйся до нашого батальйону безпілотних систем та захищай Україну разом з нами!</p>
       <a href="#form">Подати заявку</a>
     </div>
