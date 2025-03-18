@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <title>2ББпС 59 ОШбр</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Базові стилі можна додати прямо тут або підключити окремий .css -->
   <style>
+    /* Скидання відступів */
     * {
       margin: 0;
       padding: 0;
@@ -15,13 +15,14 @@
     body {
       font-family: Arial, sans-serif;
       color: #333;
+      background-color: #f4f4f4; /* Світло-сірий фон для контенту */
     }
 
-    /* Hero (шапка з фоновим зображенням) */
+    /* Hero (верхній блок із фоновим зображенням) */
     .hero {
-      background: url('ВАШЕ_ФОНОВЕ_ЗОБРАЖЕННЯ.jpg') no-repeat center center;
+      background: url('background.jpg') no-repeat center center;
       background-size: cover;
-      min-height: 90vh;
+      min-height: 90vh; /* Зріст блоку по висоті вікна */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -30,69 +31,84 @@
       color: #fff;
       position: relative;
     }
+
+    /* Напівпрозорий шар, щоб текст читався краще */
     .hero-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5); /* затемнення фону */
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
     }
+
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 1; /* Щоб текст був поверх hero-overlay */
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
     }
+
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 20px;
     }
+
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 30px;
+      line-height: 1.5;
     }
+
     .hero a {
       display: inline-block;
       padding: 15px 30px;
-      background-color: #f44336;
+      background-color: #f44336; /* Червона кнопка */
       color: #fff;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
+
     .hero a:hover {
       background-color: #d32f2f;
     }
 
-    /* Основний розділ */
+    /* Контейнер для основних секцій */
     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
+      background-color: #fff; /* Білий блок */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     .section {
-      margin-bottom: 60px;
+      padding: 40px 20px;
     }
+
     .section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
+      text-align: center;
     }
+
     .section p {
       line-height: 1.6;
       margin-bottom: 20px;
+      text-align: center;
     }
 
-    /* Форма або iframe */
+    /* Розділ із формою */
     .form-section {
       text-align: center;
     }
+
     iframe {
       width: 100%;
-      height: 800px; /* налаштуйте під розмір вашої Google Форми */
+      height: 800px; /* Налаштуйте під висоту вашої Google Форми */
       border: none;
+      margin-top: 20px;
     }
 
     /* Футер */
@@ -101,6 +117,11 @@
       color: #fff;
       text-align: center;
       padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
@@ -111,33 +132,27 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>2ББпС 59 ОШбр</h1>
-      <p>Приєднуйся до нашого підрозділу та захищай Україну разом з нами!</p>
+      <p>Приєднуйся до нашого батальйону безпілотних систем та захищай Україну разом з нами!</p>
       <a href="#form">Подати заявку</a>
     </div>
   </section>
 
-  <!-- Основний блок з інформацією -->
+  <!-- Основний блок із текстом -->
   <div class="container">
     <div class="section">
       <h2>Про нас</h2>
       <p>
-        Коротко опишіть, чим займається ваш батальйон, які основні завдання,
-        чому варто приєднатися саме до вас, які переваги та можливості отримають рекрути.
+        2ББпС 59 Окремої Штурмової Бригади – це команда професіоналів, 
+        що використовують сучасні безпілотні технології на полі бою. 
+        Ми постійно вдосконалюємо навички, шукаємо нові підходи 
+        та забезпечуємо ефективну взаємодію з іншими підрозділами.
       </p>
     </div>
 
-    <div class="section">
-      <h2>Наші цілі</h2>
-      <p>
-        Розкажіть про те, як ви використовуєте безпілотні системи, які інновації впроваджуєте,
-        які результати вже досягли та що плануєте на майбутнє.
-      </p>
-    </div>
-
-    <!-- Вбудована Google Форма -->
-    <div class="section form-section" id="form">
+    <div class="section" id="form">
       <h2>Подати заявку</h2>
-      <iframe src="ВАШ_ЛІНК_НА_GOOGLE_ФОРМУ"></iframe>
+      <p>Будь ласка, заповніть форму нижче, щоб надіслати заявку на вступ до нашого підрозділу:</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXntXAZ6m15GI-mT4NSu_PKd9Fkv2wzMqrgwtVYID4pkJBBg/viewform?embedded=true"></iframe>
     </div>
   </div>
 
