@@ -1,0 +1,153 @@
+/* ========== Підключення шрифтів ========== */
+@font-face {
+    font-family: 'UAFSans';
+    src: url('fonts/UAFSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'UAFSans';
+    src: url('fonts/UAFSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* ========== Змінні (палитра кольорів) ========== */
+  :root {
+    --green-dark: #0a2b1a;  /* Темно-зелений */
+    --green: #0db14b;       /* Яскравий зелений (для кнопок/акцентів) */
+    --green-light: #47d67f; /* Світліший зелений */
+    --text-light: #fff;     /* Білий текст */
+    --text-dark: #333;      /* Темний текст */
+  }
+  
+  /* ========== Скидання відступів ========== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ========== Загальні стилі для тіла ========== */
+  body {
+    font-family: 'UAFSans', sans-serif;
+    background-color: var(--green-dark); /* Темно-зелений фон */
+    color: var(--text-light);           /* Білий текст */
+  }
+  
+  /* ========== Hero Section ========== */
+  .hero {
+    background: url('images/FB_обкладинка_2ББпС.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Напівпрозорий шар зверху фону */
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.0); /* темно-зелений із прозорістю */
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;         /* Щоб бути над псевдоелементом .hero::after */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 300px;  /* Якщо треба опустити контент нижче */
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px; /* Злегка розсунути літери */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  /* Кнопка у Hero */
+  .hero a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--green);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .hero a:hover {
+    background-color: var(--green-light);
+  }
+  
+  /* ========== Основний контейнер ========== */
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #1a3b28; /* Трохи світліший/темніший, підбирайте */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  /* Розділи */
+  .section {
+    padding: 40px 20px;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Форма */
+  .form-section {
+    text-align: center;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    margin-top: 20px;
+  }
+  
+  /* ========== Футер ========== */
+  footer {
+    background-color: var(--green-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  footer p {
+    margin: 0;
+  }
+  
