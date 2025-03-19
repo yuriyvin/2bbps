@@ -7,6 +7,7 @@
   <!-- Підключаємо зовнішній файл стилів -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+<script src="script.js"></script>
 <body>
 
   <!-- Hero Section -->
@@ -35,12 +36,25 @@
       </p>
     </div>
 
-    <div class="section" id="form">
-      <h2>Подати заявку</h2>
-      <p>Будь ласка, заповніть форму нижче, щоб надіслати заявку на вступ до нашого підрозділу:</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXntXAZ6m15GI-mT4NSu_PKd9Fkv2wzMqrgwtVYID4pkJBBg/viewform?embedded=true"></iframe>
-    </div>
-  </div>
+    <form id="customForm">
+      <label for="name">Прізвище, ім'я, по батькові</label>
+      <input type="text" id="name" placeholder="Введіть ваше ім'я" required />
+    
+      <label for="dob">Дата народження</label>
+      <input type="date" id="dob" required />
+    
+      <label for="phone">Контактний телефон</label>
+      <input type="tel" id="phone" placeholder="Введіть ваш телефон" required />
+    
+      <label for="comment">Коментар (за бажанням)</label>
+      <textarea id="comment" placeholder="Ваш коментар"></textarea>
+    
+      <button type="submit">Надіслати</button>
+    </form>
+    <p id="responseMessage"></p>
+    
+    
+    
 
   <!-- Футер -->
   <footer>
