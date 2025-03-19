@@ -104,7 +104,7 @@
   .container {
     max-width: 1000px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 20px;
     background-color: #1a3b28; /* Трохи світліший/темніший, підбирайте */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -226,4 +226,49 @@
   .content-container ul {
     padding-left: 30px; /* Відступ для списків */
   }
+
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
   
+    .container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    ul li {
+      font-size: 1rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Збільшення розміру */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+
+  ul {
+    list-style-type: none; /* Прибираємо стандартні маркери */
+    padding-left: 0; /* Прибираємо зайві відступи */
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    padding-left: 15px;
+    position: relative;
+  }
+  
+  ul li::before {
+    content: "•"; /* Додаємо красиві маркери */
+    color: #4CAF50; /* Робимо їх зеленими */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
