@@ -32,7 +32,7 @@
 /* ========== Загальні стилі для тіла ========== */
 body {
     font-family: 'UAFSans', sans-serif;
-    background: url('images/bg.jpg') no-repeat center top;
+    background: url('images/BG.jpg') no-repeat center top;
     background-size: cover;  /* Масштабуємо без спотворень */
     background-attachment: scroll; /* Фон рухається разом із контентом */
     background-color: var(--green-dark); /* Темно-зелений фон */
