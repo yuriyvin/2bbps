@@ -192,4 +192,38 @@
   footer p {
     margin: 0;
   }
+
+
+  .content-container {
+    max-width: 800px;
+    margin: 20px auto; /* Збільшений верхній відступ */
+    padding: 40px 20px;
+    background-color: #134427;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  /* Вирівнюємо текстові блоки */
+  .content-container section {
+    margin-bottom: 40px;
+  }
+  
+  .content-container h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .content-container p,
+  .content-container ul {
+    color: #ddd; /* Світліший текст */
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .content-container ul {
+    padding-left: 30px; /* Відступ для списків */
+  }
   
