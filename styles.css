@@ -109,11 +109,10 @@ body {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
-    background-color: rgba(33, 78, 55, 0.205); /* Напівпрозорий */
+    background-color: rgba(33, 78, 55, 0.15); /* Трохи сильніша прозорість */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    backdrop-filter: blur(5px); /* Додає ефект розмиття */
-    mix-blend-mode: normal; /* Зміни на normal, якщо multiply не працює */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px); /* Легке розмиття */
 }
 
 /* Вміст всередині контейнера */
@@ -121,10 +120,9 @@ body {
     max-width: 800px;
     margin: 40px auto;
     padding: 40px 20px;
-    background-color: rgba(25, 56, 40, 0.521); /* Напівпрозорий */
+    background-color: rgba(25, 56, 40, 0.3); /* Робимо трохи видимим */
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px); /* Додає розмиття */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Вирівнюємо текстові блоки */
