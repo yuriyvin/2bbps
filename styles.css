@@ -32,6 +32,9 @@
 /* ========== Загальні стилі для тіла ========== */
 body {
     font-family: 'UAFSans', sans-serif;
+    background: url('images/bg.jpg') no-repeat center top;
+    background-size: cover;  /* Масштабуємо без спотворень */
+    background-attachment: scroll; /* Фон рухається разом із контентом */
     background-color: var(--green-dark); /* Темно-зелений фон */
     color: var(--text-light);           /* Білий текст */
 }
@@ -106,9 +109,11 @@ body {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #1a3b28;
+    background-color: rgba(33, 78, 55, 0.205); /* Напівпрозорий */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px); /* Додає ефект розмиття */
+    mix-blend-mode: normal; /* Зміни на normal, якщо multiply не працює */
 }
 
 /* Вміст всередині контейнера */
@@ -116,9 +121,10 @@ body {
     max-width: 800px;
     margin: 40px auto;
     padding: 40px 20px;
-    background-color: #134427;
+    background-color: rgba(25, 56, 40, 0.521); /* Напівпрозорий */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px); /* Додає розмиття */
 }
 
 /* Вирівнюємо текстові блоки */
@@ -168,7 +174,7 @@ ul li::before {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #003300;
+    background-color: #064230;
     border-radius: 8px;
 }
 
