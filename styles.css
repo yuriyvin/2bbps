@@ -249,3 +249,63 @@ footer {
         padding-left: 20px; /* Вирівнюємо відносно маркера */
     }
 }
+
+/* Стилі для секції "Про нас" */
+#about {
+    position: relative;
+    padding: 40px 0;
+    overflow: visible;
+  }
+  
+  /* Стилі для тексту в "Про нас" */
+  #about h2 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 20px;
+  }
+  
+  #about p {
+    position: relative;
+    z-index: 1;
+    text-align: justify;
+    max-width: 80%; /* Обмежуємо ширину, щоб не накладався на зображення */
+    margin: 0 20px; /* Центруємо текстовий блок */
+    line-height: 1.6;
+  }
+  
+  /* Стилі для зображення */
+  .about-image {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    height: 100%;
+    width: auto;
+    max-width: 50%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.8;
+  }
+  
+  /* Адаптивність для менших екранів */
+  @media (max-width: 768px) {
+    #about {
+      align-items: center;
+      padding: 40px 20px;
+    }
+  
+    #about h2,
+    #about p {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    .about-image {
+      position: static;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      opacity: 1;
+    }
+  }
