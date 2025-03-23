@@ -252,3 +252,91 @@ footer .social-links a:hover {
 footer .social-links i {
     margin-right: 5px;
 }
+
+/* Навігаційна панель */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--green-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* Список посилань */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: var(--green-light);
+}
+
+/* Кнопка підтримати */
+.support-button {
+    background-color: var(--green);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.support-button:hover {
+    background-color: var(--green-light);
+}
+
+/* Гамбургер меню */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle i {
+    color: var(--text-light);
+    font-size: 1.5rem;
+}
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        background-color: var(--green-dark);
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+}

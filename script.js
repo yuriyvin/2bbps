@@ -29,3 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// Скрипт для меню-гамбургера
+document.getElementById("mobile-menu").addEventListener("click", function() {
+    const navList = document.querySelector(".nav-list");
+    navList.classList.toggle("show");
+});
+
