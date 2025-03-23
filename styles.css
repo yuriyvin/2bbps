@@ -353,8 +353,8 @@ footer .social-links a:hover {
 /* Стиль кнопки Підтримати */
 .navbar .support-button {
     background-color: transparent; /* Прозорий фон */
-    border: 2px solid var(--green); /* Салатова обводка */
-    color: var(--green); /* Колір тексту */
+    border: 2px solid #FF4500; /* Помаранчева обводка */
+    color: #FF4500; /* Помаранчевий колір тексту */
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
@@ -363,7 +363,7 @@ footer .social-links a:hover {
 
 /* Ефект наведення */
 .navbar .support-button:hover {
-    background-color: var(--green-light);
+    background-color: #c23a09;;
     color: white;
     border-color: var(--green-light);
 }
