@@ -332,3 +332,18 @@ footer .social-links a:hover {
     background-color: var(--green-light);
     color: white; /* Щоб текст залишався білим */
 }
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.2rem; /* Зменшуємо розмір тексту */
+        line-height: 1.1;
+    }
+
+    .hero-content {
+        margin-top: 250px; /* Опускаємо текст нижче, якщо потрібно */
+    }
+
+    .hero {
+        background-size: 450%; /* Зменшуємо розмір зображення */
+    }
+}
