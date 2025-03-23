@@ -367,3 +367,15 @@ footer .social-links a:hover {
     color: white;
     border-color: var(--green-light);
 }
+
+/* Збільшення тексту у секціях для мобільних пристроїв */
+@media (max-width: 768px) {
+    .content-container h2 {
+        font-size: 1.8rem; /* Збільшений розмір заголовків */
+    }
+
+    .content-container p,
+    .content-container ul li {
+        font-size: 1.1rem; /* Збільшений розмір тексту в параграфах та списках */
+    }
+}
