@@ -225,3 +225,30 @@ footer {
 #support a:hover {
     color: var(--green);
 }
+
+/* Стилі для соцмереж у футері */
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: var(--green-light);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+footer .social-links a:hover {
+    color: var(--green);
+}
+
+footer .social-links i {
+    margin-right: 5px;
+}
