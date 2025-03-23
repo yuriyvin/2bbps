@@ -15,11 +15,11 @@
 
 /* ========== Змінні (палитра кольорів) ========== */
 :root {
-    --green-dark: #0a2b1a;  /* Темно-зелений */
-    --green: #0db14b;       /* Яскравий зелений (для кнопок/акцентів) */
-    --green-light: #47d67f; /* Світліший зелений */
-    --text-light: #fff;     /* Білий текст */
-    --text-dark: #333;      /* Темний текст */
+    --green-dark: #0a2b1a;
+    --green: #0db14b;
+    --green-light: #47d67f;
+    --text-light: #fff;
+    --text-dark: #333;
 }
 
 /* ========== Скидання відступів ========== */
@@ -29,19 +29,16 @@
     box-sizing: border-box;
 }
 
-/* ========== Загальні стилі для тіла ========== */
 body {
     font-family: 'UAFSans', sans-serif;
     background: url('images/BG.jpg') no-repeat center top;
-    background-size: cover;  /* Масштабуємо без спотворень */
-    background-attachment: scroll; /* Фон рухається разом із контентом */
-    background-color: var(--green-dark); /* Темно-зелений фон */
-    color: var(--text-light);           /* Білий текст */
+    background-size: cover;
+    color: var(--text-light);
 }
 
 /* ========== Hero Section ========== */
 .hero {
-    background: url('images/FB_обкладинка_2ББпС.jpg') no-repeat center center;
+    background: url('images/FB_обкладинка_2ББпС_2.jpg') no-repeat center center;
     background-size: cover;
     min-height: 70vh;
     display: flex;
@@ -50,18 +47,6 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-}
-
-/* Напівпрозорий шар зверху фону */
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.0); /* Темно-зелений із прозорістю */
-    z-index: 0;
 }
 
 .hero-content {
@@ -79,18 +64,14 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 1px;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    line-height: 1.5;
 }
 
-/* Кнопка у Hero */
 .hero a {
-    display: inline-block;
     padding: 15px 30px;
     background-color: var(--green);
     color: var(--text-light);
@@ -105,27 +86,15 @@ body {
 }
 
 /* ========== Основний контейнер ========== */
-.container {
+.content-container {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
-    background-color: rgba(33, 78, 55, 0.15); /* Трохи сильніша прозорість */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px); /* Легке розмиття */
-}
-
-/* Вміст всередині контейнера */
-.content-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px 20px;
-    background-color: rgba(25, 56, 40, 0.3); /* Робимо трохи видимим */
+    background-color: rgba(25, 56, 40, 0.3);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Вирівнюємо текстові блоки */
 .content-container section {
     margin-bottom: 40px;
 }
@@ -143,23 +112,20 @@ body {
     text-align: justify;
 }
 
-/* ========== Списки (Виправлено) ========== */
 ul {
     list-style-type: none;
-    padding-left: 20px; /* Відступ для списків */
+    padding-left: 20px;
 }
 
 ul li {
     position: relative;
     padding-left: 25px;
     margin-bottom: 10px;
-    font-size: 1.1rem;
 }
 
 ul li::before {
-    content: "•"; /* Додаємо красиві маркери */
-    color: #4CAF50; /* Робимо їх зеленими */
-    font-weight: bold;
+    content: "•";
+    color: #4CAF50;
     position: absolute;
     left: 0;
 }
@@ -184,16 +150,10 @@ ul li::before {
 
 #customForm input,
 #customForm textarea {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-}
-
-#customForm textarea {
-    height: 80px;
-    resize: none;
 }
 
 #customForm button {
@@ -204,18 +164,10 @@ ul li::before {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 #customForm button:hover {
     background-color: #d32f2f;
-}
-
-#responseMessage {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #fff;
 }
 
 /* ========== Футер ========== */
@@ -224,88 +176,4 @@ footer {
     color: var(--text-light);
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
 }
-
-/* ========== Медіа-запити ========== */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    ul {
-        padding-left: 10px; /* Мінімальний відступ для списку */
-    }
-
-    ul li {
-        padding-left: 20px; /* Вирівнюємо відносно маркера */
-    }
-}
-
-/* Стилі для секції "Про нас" */
-#about {
-    position: relative;
-    padding: 40px 0;
-    overflow: visible;
-  }
-  
-  /* Стилі для тексту в "Про нас" */
-  #about h2 {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin: 0 20px;
-  }
-  
-  #about p {
-    position: relative;
-    z-index: 1;
-    text-align: justify;
-    max-width: 80%; /* Обмежуємо ширину, щоб не накладався на зображення */
-    margin: 0 20px; /* Центруємо текстовий блок */
-    line-height: 1.6;
-  }
-  
-  /* Стилі для зображення */
-  .about-image {
-    position: absolute;
-    top: 0;
-    right: -20px;
-    height: 100%;
-    width: auto;
-    max-width: 50%;
-    object-fit: cover;
-    z-index: 0;
-    opacity: 0.8;
-  }
-  
-  /* Адаптивність для менших екранів */
-  @media (max-width: 768px) {
-    #about {
-      align-items: center;
-      padding: 40px 20px;
-    }
-  
-    #about h2,
-    #about p {
-      max-width: 100%;
-      margin: 0;
-    }
-  
-    .about-image {
-      position: static;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin-top: 20px;
-      opacity: 1;
-    }
-  }
