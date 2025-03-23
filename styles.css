@@ -34,6 +34,7 @@ body {
     background: url('images/BG.jpg') no-repeat center top;
     background-size: cover;
     color: var(--text-light);
+    scroll-behavior: smooth;
 }
 
 /* ========== Hero Section ========== */
@@ -104,6 +105,7 @@ body {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
+    scroll-margin-top: 100px; /* Цей відступ має забезпечити правильну прокрутку */
 }
 
 .content-container p {
@@ -280,4 +282,35 @@ footer {
 }
 
 
+h2 {
+    scroll-margin-top: 100px; /* Зміни відстань, якщо потрібно */
+}
 
+
+section {
+    padding-top: 80px; /* Простір перед кожним блоком */
+    margin-top: -80px;  /* Вирівнювання блоку після прокрутки */
+}
+
+/* Стиль для посилань */
+a {
+    color: var(--green-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--green);
+}
+
+/* Стиль для соцмереж у футері */
+footer .social-links a {
+    color: var(--green-light);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: var(--green);
+}
