@@ -196,5 +196,32 @@ footer {
 @media (max-width: 768px) {
     .image-block img {
         max-width: 100%; /* Зображення займає всю ширину контейнера */
+        margin: -20px 0 0px 0;
     }
+}
+
+/* Секція підтримки */
+#support {
+    margin-top: 40px;
+}
+
+#support h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#support p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#support a {
+    color: var(--green-light);
+    text-decoration: underline;
+}
+
+#support a:hover {
+    color: var(--green);
 }
