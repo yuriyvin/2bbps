@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ====== ЛОГІКА НАДСИЛАННЯ ФОРМИ ======
     const form = document.getElementById("customForm");
 
     if (!form) {
@@ -28,12 +29,21 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("responseMessage").textContent = "❌ Помилка надсилання!";
         });
     });
+
+    // ====== ЛОГІКА НАВІГАЦІЇ ======
+    const hamburger = document.querySelector('.hamburger');
+    const navbarLinks = document.querySelector('.navbar-links');
+    const menuLinks = document.querySelectorAll(".navbar-links a");
+
+    // Відкриття/закриття меню по кліку на гамбургер
+    hamburger.addEventListener('click', () => {
+        navbarLinks.classList.toggle('open');
+    });
+
+    // Закриття меню після кліку на пункт меню
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navbarLinks.classList.remove("open");
+        });
+    });
 });
-
-
-// Скрипт для меню-гамбургера
-document.getElementById("mobile-menu").addEventListener("click", function() {
-    const navList = document.querySelector(".nav-list");
-    navList.classList.toggle("show");
-});
-
