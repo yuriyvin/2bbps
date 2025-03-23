@@ -192,3 +192,9 @@ footer {
     border-radius: 0px; /* Округлені кути */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.0); /* Невелика тінь для зображення */
 }
+
+@media (max-width: 768px) {
+    .image-block img {
+        max-width: 100%; /* Зображення займає всю ширину контейнера */
+    }
+}
