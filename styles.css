@@ -48,6 +48,7 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
+    margin-bottom: 0; /* Прибирає зайвий відступ знизу */
 }
 
 .hero-content {
@@ -94,6 +95,7 @@ body {
     background-color: rgba(25, 56, 40, 0.3);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: -10px;
 }
 
 .content-container section {
@@ -346,4 +348,22 @@ footer .social-links a:hover {
     .hero {
         background-size: 450%; /* Зменшуємо розмір зображення */
     }
+}
+
+/* Стиль кнопки Підтримати */
+.navbar .support-button {
+    background-color: transparent; /* Прозорий фон */
+    border: 2px solid var(--green); /* Салатова обводка */
+    color: var(--green); /* Колір тексту */
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Ефект наведення */
+.navbar .support-button:hover {
+    background-color: var(--green-light);
+    color: white;
+    border-color: var(--green-light);
 }
