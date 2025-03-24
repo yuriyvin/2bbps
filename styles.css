@@ -345,7 +345,7 @@ a:hover {
     }
 
     .hero {
-        background-size: 200%; /* Повертаємо попередній розмір */
+        background-size: 300%; /* Повертаємо попередній розмір */
         background-position: center top;
     }
 
