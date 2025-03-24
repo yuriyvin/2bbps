@@ -267,6 +267,13 @@ ul li::before {
     background-color: #d32f2f;
 }
 
+#responseMessage {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--green-light);
+    text-align: center;
+}
+
 /* ========== Футер ========== */
 footer {
     background-color: var(--green-dark);
