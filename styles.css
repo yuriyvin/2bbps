@@ -29,6 +29,7 @@
     box-sizing: border-box;
 }
 
+/* ========== Загальні стилі для тіла ========== */
 body {
     font-family: 'UAFSans', sans-serif;
     background: url('images/BG.jpg') no-repeat center top;
@@ -37,10 +38,60 @@ body {
     scroll-behavior: smooth;
 }
 
+/* ========== Навігаційне меню ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--green-dark);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: var(--green-light);
+}
+
+/* Кнопка "Підтримати" */
+.navbar .support-button {
+    background-color: transparent;
+    border: 2px solid #FF4500;
+    color: #FF4500;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin-left: auto;
+}
+
+.navbar .support-button:hover {
+    background-color: #c23a09;
+    color: white;
+    border-color: var(--green-light);
+}
+
 /* ========== Hero Section ========== */
 .hero {
     background: url('images/FB_обкладинка_2ББпС_3.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: contain; /* Зберігаємо пропорції */
+    background-position: center top; /* Вирівнюємо зверху */
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -48,7 +99,8 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    margin-bottom: 0; /* Прибирає зайвий відступ знизу */
+    margin-bottom: 0;
+    width: 100%;
 }
 
 .hero-content {
@@ -57,7 +109,14 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 300px;
+    margin-top: 100px;
+}
+
+.hero-emblem {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 150px;
+    height: auto;
 }
 
 .hero h1 {
@@ -66,6 +125,22 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.2;
+}
+
+.hero h1 .highlight-green {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.hero h1 .subtext {
+    color: white;
+    font-weight: 400;
+}
+
+.hero h1 span {
+    display: block;
+    margin: 0;
+    line-height: 1.3; /* Ще зменшуємо для компактності */
 }
 
 .hero p {
@@ -90,16 +165,17 @@ body {
 /* ========== Основний контейнер ========== */
 .content-container {
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 0px auto;
     padding: 20px;
     background-color: rgba(25, 56, 40, 0.3);
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    margin-top: -10px;
 }
 
 .content-container section {
     margin-bottom: 40px;
+    padding-top: 80px;
+    margin-top: -80px;
 }
 
 .content-container h2 {
@@ -107,7 +183,7 @@ body {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
-    scroll-margin-top: 100px; /* Цей відступ має забезпечити правильну прокрутку */
+    scroll-margin-top: 100px;
 }
 
 .content-container p {
@@ -116,6 +192,7 @@ body {
     text-align: justify;
 }
 
+/* ========== Списки ========== */
 ul {
     list-style-type: none;
     padding-left: 20px;
@@ -132,6 +209,19 @@ ul li::before {
     color: #4CAF50;
     position: absolute;
     left: 0;
+}
+
+/* ========== Зображення ========== */
+.image-block {
+    text-align: center;
+    margin: -20px 0 30px 0;
+}
+
+.image-block img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
 }
 
 /* ========== Форма заявки ========== */
@@ -168,6 +258,7 @@ ul li::before {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #customForm button:hover {
@@ -182,69 +273,31 @@ footer {
     padding: 20px 0;
 }
 
-/* ========== Зображення ========== */
-.image-block {
-    text-align: center;
-    margin: -20px 0 30px 0;
-}
-
-.image-block img {
-    max-width: 60%;
-    height: auto;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
-}
-
-@media (max-width: 768px) {
-    .image-block img {
-        max-width: 100%;
-        margin: -20px 0 0px 0;
-    }
-}
-
-/* ========== Верхнє меню (Навігація) ========== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--green-dark);
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    height: 60px; /* Збільшена висота */
-}
-
-.navbar-links {
-    display: flex;
-    gap: 15px;
-}
-
-.navbar-links a {
-    color: white;
+footer .social-links a {
+    color: var(--green-light);
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 10px;
     transition: color 0.3s;
 }
 
-.navbar-links a:hover {
-    color: var(--green-light);
+footer .social-links a:hover {
+    color: var(--green);
 }
 
-/* ========== Кнопка Підтримати ========== */
-.navbar .support-button {
-    background-color: var(--green);
-    color: white;
-    padding: 10px 20px;
+/* ========== Загальні стилі для посилань ========== */
+a {
+    color: var(--green-light);
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--green);
 }
 
 /* ========== Мобільні стилі ========== */
 @media (max-width: 768px) {
+    /* Навігація */
     .navbar-links {
         display: none;
         flex-direction: column;
@@ -262,7 +315,7 @@ footer {
     }
 
     .hamburger {
-        display: block; /* Змінюємо на block щоб відображати на мобільних */
+        display: block;
         position: absolute;
         top: 15px;
         left: 20px;
@@ -275,107 +328,55 @@ footer {
     .navbar .support-button {
         margin-left: auto;
     }
-}
 
-@media (min-width: 769px) { 
-    .hamburger {
-        display: none; /* Приховуємо гамбургер для широких екранів */
-    }
-}
-
-
-h2 {
-    scroll-margin-top: 100px; /* Зміни відстань, якщо потрібно */
-}
-
-
-section {
-    padding-top: 80px; /* Простір перед кожним блоком */
-    margin-top: -80px;  /* Вирівнювання блоку після прокрутки */
-}
-
-/* Стиль для посилань */
-a {
-    color: var(--green-light);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: var(--green);
-}
-
-/* Стиль для соцмереж у футері */
-footer .social-links a {
-    color: var(--green-light);
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: var(--green);
-}
-
-
-/* Кнопка "Підтримати" */
-.navbar .support-button {
-    background-color: var(--green);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    margin-left: auto;
-}
-
-/* Стиль при наведенні */
-.navbar .support-button:hover {
-    background-color: var(--green-light);
-    color: white; /* Щоб текст залишався білим */
-}
-
-@media (max-width: 768px) {
+    /* Hero */
     .hero-content h1 {
-        font-size: 1.2rem; /* Зменшуємо розмір тексту */
-        line-height: 1.1;
+        font-size: 1.2rem;
+        line-height: 1; /* Зменшуємо міжрядковий інтервал для прибирання пробілу */
     }
 
     .hero-content {
-        margin-top: 250px; /* Опускаємо текст нижче, якщо потрібно */
+        margin-top: 0px; /* Зменшуємо, бо емблема тепер окремий елемент */
+    padding: 10px;
+    }
+
+    .hero-emblem {
+        max-width: 120px; /* Зменшуємо для мобільної версії */
     }
 
     .hero {
-        background-size: 450%; /* Зменшуємо розмір зображення */
+        background-size: 200%; /* Повертаємо попередній розмір */
+        background-position: center top;
     }
-}
 
-/* Стиль кнопки Підтримати */
-.navbar .support-button {
-    background-color: transparent; /* Прозорий фон */
-    border: 2px solid #FF4500; /* Помаранчева обводка */
-    color: #FF4500; /* Помаранчевий колір тексту */
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
+    .hero h1 span {
+        display: block;
+        margin: 0; /* Прибираємо можливі відступи */
+    }
 
-/* Ефект наведення */
-.navbar .support-button:hover {
-    background-color: #c23a09;;
-    color: white;
-    border-color: var(--green-light);
-}
+    /* Зображення */
+    .image-block img {
+        max-width: 100%;
+        margin: -20px 0 0 0;
+    }
 
-/* Збільшення тексту у секціях для мобільних пристроїв */
-@media (max-width: 768px) {
+    /* Текст у секціях */
     .content-container h2 {
-        font-size: 1.8rem; /* Збільшений розмір заголовків */
+        font-size: 1.8rem;
     }
 
     .content-container p,
     .content-container ul li {
-        font-size: 1.1rem; /* Збільшений розмір тексту в параграфах та списках */
+        font-size: 1.1rem;
+    }
+
+    .content-container {
+        margin-top: -70px; /* Зменшуємо відстань у мобільній версії */
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
     }
 }
